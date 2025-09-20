@@ -32,6 +32,7 @@ public class EmployeeService {
         return employeeRepo.findAll(Sort.by(Sort.Direction.ASC, field));
     }
 
+    // get Employee
     public Page<Employee> getEmployeesWithPagination(int offSet, int pageSize){
         return employeeRepo.findAll(PageRequest.of(offSet,pageSize));
     }
